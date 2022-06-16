@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Spotify Search Live API</title>
+        <link rel="Stylesheet" href="style.css" />
+        <link rel="icon" type="image/x-icon" href="album-cover-not-found.png" />
+    </head>
+    <body>
+        <header id="header-container">
+            <img src="images/spotify-logo.png" alt="spotify logo" id="spotify-logo" />
+            <p id="title">Spotify Search <span>live</span></p>
+            <input type="text" placeholder="Search artists, albums or playlists.." />
+            <select class="target">
+                <option>artist</option>
+                <option>album</option>
+                <option>playlist</option>
+            </select>
+            <!-- no search button needed since live search active -->
+            <!-- <button id="submit-button">Search</button> -->
+        </header>
+
+        <div id="results-container"></div>
+        <!-- no more button needed since "?scroll=infinite" active -->
+        <!-- <button id="more-botton">More</button> -->
+        <div class="container-loading-ring">
+            <div class="loading-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

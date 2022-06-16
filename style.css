@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(22, 22, 22);
+    font-family: "proxima-nova", sans-serif;
+}
+
+#spotify-logo {
+    color: white;
+    width: 150px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+span {
+    color: white;
+    font-size: 0.45em;
+    transform: translate(10px, -10px);
+    position: absolute;
+    font-weight: 300px;
+}
+
+#header-container {
+    width: 100%;
+    min-width: 700px;
+    text-align: center;
+    background: transparent;
+}
+
+input {
+    width: 315px;
+    min-width: 250px;
+    font-size: 1.1em;
+    padding-left: 15px;
+    border-radius: 50px;
+    border: none;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px lime;
+}
+input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.9em;
+}
+
+select,
+button {
+    background: rgb(22, 22, 22);
+    color: white;
+    border: none;
+    width: 100px;
+    padding: 2px 8px;
+    outline: none;
+    font-size: 1.05em;
+    margin-left: 20px;
+}
+select:hover,
+button:hover {
+    transition: 0.25s;
+    color: lime;
+    cursor: pointer;
+}
+
+select option {
+    color: white;
+}
+
+p {
+    font-size: 2.8em;
+    color: lime;
+    font-weight: 300;
+    text-decoration: border;
+}
+
+#firstHtml {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    padding: 5vh 0;
+}
+
+#results-container {
+    text-align: center;
+    min-width: 700px;
+}
+
+.cardContainer {
+    margin: 15px;
+    display: inline-block;
+    text-align: center;
+    justify-items: center;
+    align-self: center;
+}
+.cardContainer:hover {
+    transition: 0.25s;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.25);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    width: 300px;
+    position: relative;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+#albumImgs {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+}
+
+#nameslinks {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+#nameslinks:hover {
+    color: lime;
+}
+
+.container-loading-ring {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.loading-ring {
+    top: 10vh;
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+.loading-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: loading-ring-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: lime transparent transparent transparent;
+}
+.loading-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.loading-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.loading-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes loading-ring-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.displayNone {
+    display: none;
+}
